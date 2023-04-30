@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { ThemeProvider } from '@mui/material/styles';
+import theme from './theme';
+import Header from './components/Header';
+import CVPage from './components/CVPage';
+import BlogPage from './components/BlogPage';
+import Footer from './components/Footer';
+import AboutPage from './components/AboutPage';
+import ProductsPage from './components/ProductsPage';
+import { Box } from '@mui/system';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <ThemeProvider theme={theme}>
+      <Router>
+        <Header />
+        <Box
+          sx={{
+            backgroundColor: theme.globals.backgroundColor,
+            minHeight: '100vh',
+            paddingTop: theme.spacing(2),
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Routes>
+            <Route path="/" element={<BlogPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/products" element={<ProductsPage />} />
+            <Route path="/cv" element={<CVPage />} />
+          </Routes>
+          <Footer />
+        </Box>
+      </Router>
+    </ThemeProvider>
   );
 }
 
