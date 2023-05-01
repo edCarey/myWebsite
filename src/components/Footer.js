@@ -4,7 +4,7 @@ import { Container, Typography } from '@mui/material';
 const Footer = () => {
   return (
     <footer>
-      <Container maxWidth="lg" sx={{ paddingTop: 4, paddingBottom: 2 }}>
+      <Container maxWidth="lg" sx={{ paddingTop: 24, paddingBottom: 2 }}>
         <Typography color="primary" variant="body1" align="center">
           © {new Date().getFullYear()} Ed Carey. All rights reserved.
         </Typography>

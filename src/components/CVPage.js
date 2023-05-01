@@ -4,10 +4,10 @@ import { Typography, Grid, Card, CardContent, Container } from '@mui/material';
 const CVPage = () => {
   return (
     <Container maxWidth="md">
-      <Typography variant="h4" align='center' gutterBottom sx={{mt:4}}>
+      <Typography variant="h3" align='center' gutterBottom sx={{mt:24}}>
         CV
       </Typography>
-      <Grid container spacing={4}>
+      <Grid container spacing={4} sx={{mt:24}}>
         <Grid item xs={12} md={12}>
             <Card>
                 <CardContent>

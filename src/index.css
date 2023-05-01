@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Add this to your CSS or create a new file and import it into your component */
+a.image-button-link {
+  display: block;
+  text-decoration: none;
+}
