@@ -1,6 +1,6 @@
 import React from 'react';
-import { Container, Typography, Box, ButtonBase, styled } from '@mui/material';
-
+import { Container, Typography, Box, ButtonBase, styled, Button, Grid } from '@mui/material';
+import {Link as RouterLink} from 'react-router-dom';
 
 const products = [
   {
@@ -159,6 +159,19 @@ const ProductsPage = () => {
                 </Box>
             ))}
         </Box>
+        <Box mt={24}>
+            <Typography color="primary" variant="h4" align="center" sx={{maxWidth: '600px', margin: '0 auto'}}>
+                Find out more about Ed and his approach to building product businesses
+            </Typography>
+        </Box>
+
+        <Grid container justifyContent="center">
+            <Grid item>
+                <Button color="primary" variant="outlined"  component={RouterLink} to="/about" align='center' sx={{mt:8}}>
+                    About Ed
+                </Button>
+            </Grid>
+        </Grid>
     </Container>
   );
 };
