@@ -9,10 +9,9 @@ const BlogPage = () => {
       </Typography>
       <Box sx={{ display: 'flex', justifyContent: 'center', mt: 8 }}>
         <Button
-          variant="contained"
           color="primary"
           variant="outlined"
-          href="https://medium.com/@yourusername"
+          href="https://medium.com/@ed_ecarey23"
           target="_blank"
           rel="noopener noreferrer"
         >
