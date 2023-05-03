@@ -1,6 +1,6 @@
 import React from 'react';
-import { Typography, Grid, Avatar, IconButton, Button, Container, Box, Link } from '@mui/material';
-import { Email, LinkedIn, Twitter } from '@mui/icons-material';
+import { Typography, Grid, Avatar, IconButton, Container, Box } from '@mui/material';
+import { Email, LinkedIn } from '@mui/icons-material';
 import { Link as RouterLink } from 'react-router-dom';
 
 
