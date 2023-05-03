@@ -19,13 +19,13 @@ const Header = () => {
         </RouterLink>
         <div style={{ flexGrow: 1 }}></div>
         <Button color="primary" component={Link} to="/">
-          Blog
+          Products
         </Button>
         <Button color="primary" component={Link} to="/about">
           About
         </Button>
-        <Button color="primary" component={Link} to="/products">
-          Products
+        <Button color="primary" component={Link} to="/blog">
+          Blog
         </Button>
         <Button color="primary" component={Link} to="/cv">
           CV

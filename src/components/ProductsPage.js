@@ -109,7 +109,16 @@ const ProductsPage = () => {
             gutterBottom 
             sx={{ mt: 24}}
         >
-            Ed is a product business creator, technology enthusiast, and hobby coder based in the UK
+            Ed is a product creator, technology enthusiast, and hobby coder based in the UK
+        </Typography>
+        <Typography 
+            color="primary" 
+            variant="h5" 
+            align="center" 
+            gutterBottom 
+            sx={{ mt: 24}}
+        >
+            Product businesses created
         </Typography>
         <Box 
             sx={{ 
@@ -118,7 +127,7 @@ const ProductsPage = () => {
                 flexWrap: 'wrap', 
                 minWidth: 300, 
                 width: '100%', 
-                mt: 24 
+                mt: 4 
             }}
         >
             {products.map((product) => (

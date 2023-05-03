@@ -14,7 +14,7 @@ const AboutPage = () => {
         Product Business Creator
       </Typography>
       <Typography color="headline" variant="h5" align="center" gutterBottom sx={{ mt: 8, maxWidth: '400px', margin: '0 auto'}}>
-        Customer-Centric, Data-Driven, Problem Solver and Product Creator
+        Customer-Centric, Data-Driven, Problem Solver
       </Typography>
       <Grid container spacing={2} alignItems="flex-start" sx={{ mt: 12}}>
         
@@ -90,9 +90,11 @@ const AboutPage = () => {
                   </IconButton>
                 </Grid>
               </Grid>
-              <Typography color="primary" variant="body1" align="center" paragraph sx={{mt:4}}>
+              <Box mt={4}>
+                <Typography color="primary" variant="body1" align="center" sx={{maxWidth: '600px', margin: '0 auto'}}>
                 Please don't hesitate to reach out if you would like to chat about work, share your feedback and input, or just connect. I am always open to new conversations and will do my best to respond to you in a timely manner. Cheers!
-              </Typography>
+                </Typography>
+              </Box>
             </Grid>              
           </Grid>
         </Box>

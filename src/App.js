@@ -25,9 +25,9 @@ function App() {
           }}
         >
           <Routes>
-            <Route path="/" element={<BlogPage />} />
+            <Route path="/" element={<ProductsPage />} />
+            <Route path="/blog" element={<BlogPage />} />
             <Route path="/about" element={<AboutPage />} />
-            <Route path="/products" element={<ProductsPage />} />
             <Route path="/cv" element={<CVPage />} />
           </Routes>
           <Footer />
