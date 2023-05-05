@@ -99,6 +99,13 @@ const ImageButton = styled(ButtonBase)(({ theme }) => ({
     transition: theme.transitions.create('opacity'),
   }));
 
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }
+
 const ProductsPage = () => {
   return (
     <Container maxWidth="md"> 
@@ -176,7 +183,7 @@ const ProductsPage = () => {
 
         <Grid container justifyContent="center">
             <Grid item>
-                <Button color="primary" variant="outlined"  component={RouterLink} to="/about" align='center' sx={{mt:8}}>
+                <Button onClick={scrollToTop} color="primary" variant="outlined"  component={RouterLink} to="/about" align='center' sx={{mt:8}}>
                     About Ed
                 </Button>
             </Grid>
