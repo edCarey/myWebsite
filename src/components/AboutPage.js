@@ -21,20 +21,6 @@ const AboutPage = () => {
         <Grid item xs={12} sm={3}>
           <Avatar
             alt="Ed Carey"
-            src="/images/Primary_Headshot.png"
-            sx={{ 
-              width: '100%', 
-              height: 'auto', 
-              maxWidth: '200px',
-              '@media (max-width: 599px)': {
-                display: 'block',
-                marginLeft: 'auto',
-                marginRight: 'auto',
-              },
-            }}            
-          />
-          <Avatar
-            alt="Ed Carey"
             src="/images/644dab143d915f461c35912e-DeepAgency.png"
             sx={{ 
               width: '100%', 
