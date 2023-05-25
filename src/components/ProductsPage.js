@@ -5,16 +5,16 @@ import {Link as RouterLink} from 'react-router-dom';
 const products = [
   {
     id: 1,
-    title: 'Spoke',
-    image: '/images/Spoke_Image.png',
-    url: 'https://www.spokemarketplace.com/',
+    title: 'Daphne',
+    image: '/images/Daphne_Image.png',
+    url: 'https://www.daphnetech.io/',
     width: '100%',
   },
   {
     id: 2,
-    title: 'Daphne',
-    image: '/images/Daphne_Image.png',
-    url: 'https://www.daphnetech.io/',
+    title: 'Spoke',
+    image: '/images/Spoke_Image.png',
+    url: 'https://www.spokemarketplace.com/',
     width: '100%',
   },
   {
@@ -26,6 +26,20 @@ const products = [
   },
   {
     id: 4,
+    title: 'Sense - E20',
+    image: '/images/E20.png',
+    url: 'https://e20.me/e20/',
+    width: '100%',
+  },
+  {
+    id: 5,
+    title: 'Sense - FAB KSA Mobile',
+    image: '/images/FAB_Mobile.png',
+    url: 'https://www.bankfab.com/en-sa/personal/mobile-app',
+    width: '100%',
+  },
+  {
+    id: 6,
     title: 'Kiplot',
     image: '/images/Kiplot_Image.png',
     url: 'https://www.kiplot.com/',
