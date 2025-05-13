@@ -145,8 +145,8 @@ const ProductsPage = () => {
         gutterBottom
         sx={{ mt: 24 }}
       >
-        Ed is a product creator, technology enthusiast, and hobby coder based in
-        the UK
+        Ed is a UK-based product builder, startup creator, AI enthusiast, and
+        hobby coder.
       </Typography>
       <Typography
         color="primary"
