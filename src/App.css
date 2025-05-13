@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+* {
+  font-family: 'Space Mono', monospace;
+}
+
+/* Or if you want to be more specific, you can target specific elements */
+body {
+  font-family: 'Space Mono', monospace;
+}
