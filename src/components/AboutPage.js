@@ -106,7 +106,7 @@ const AboutPage = () => {
             </Typography>
             <Grid container justifyContent="center" spacing={2}>
               <Grid item>
-                <IconButton href="mailto:ecarey23@gmail.com" color="primary">
+                <IconButton href="mailto:ed@edcarey.io" color="primary">
                   <Email />
                 </IconButton>
               </Grid>
