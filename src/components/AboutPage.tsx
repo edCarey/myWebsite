@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import React from "react";
 
-const AboutPage = () => {
+const AboutPage: React.FC = () => {
   return (
     <Container maxWidth="md">
       <Typography
@@ -30,15 +30,6 @@ const AboutPage = () => {
       >
         Product Builder
       </Typography>
-      {/* <Typography
-        color="headline"
-        variant="h5"
-        align="center"
-        gutterBottom
-        sx={{ mt: 8, maxWidth: "400px", margin: "0 auto" }}
-      >
-        Customer-Centric, Data-Driven, Problem Solver
-      </Typography> */}
       <Grid container spacing={2} alignItems="flex-start" sx={{ mt: 12 }}>
         <Grid item xs={12} sm={3}>
           <Avatar
@@ -59,16 +50,16 @@ const AboutPage = () => {
         </Grid>
         <Grid item xs={12} sm={9}>
           <Typography color="primary" variant="body1" paragraph>
-            I’m a product builder and startup founder who loves solving real
+            I'm a product builder and startup founder who loves solving real
             problems with simple, focused solutions. I care deeply about
             creating products that genuinely work for the people using them,
             blending customer insight, lean thinking, and just enough coding
             ability to be dangerous.
           </Typography>
           <Typography color="primary" variant="body1" paragraph>
-            Over the years, I’ve helped launch and grow multiple startups —
+            Over the years, I've helped launch and grow multiple startups —
             raising capital, leading cross-functional teams, and contributing to
-            two successful product exits generating over $60 million. I’ve
+            two successful product exits generating over $60 million. I've
             worked as a CEO, a hands-on PM, and everything in between, always
             focused on solving problems that need painkillers, not vitamins.
           </Typography>
@@ -80,14 +71,14 @@ const AboutPage = () => {
             keep things grounded, collaborative, and human.
           </Typography>
           <Typography color="primary" variant="body1" paragraph>
-            Right now, I’m especially curious about how large language models
+            Right now, I'm especially curious about how large language models
             and AI agents can drive real-world efficiencies — not just as a
             trend, but as practical tools that help people and businesses move
             faster.
           </Typography>
           <Typography color="primary" variant="body1" paragraph>
-            If you’re working on something ambitious, trying to scale what
-            you’ve started, or just want to chat product, AI or code, I’d love
+            If you're working on something ambitious, trying to scale what
+            you've started, or just want to chat product, AI or code, I'd love
             to hear from you.
           </Typography>
         </Grid>

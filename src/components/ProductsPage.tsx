@@ -3,14 +3,22 @@ import {
   Button,
   ButtonBase,
   Container,
-  Grid,
   styled,
+  Theme,
   Typography,
 } from "@mui/material";
 import React from "react";
 import { Link as RouterLink } from "react-router-dom";
 
-const products = [
+interface Product {
+  id: number;
+  title: string;
+  image: string;
+  url: string;
+  width: string;
+}
+
+const products: Product[] = [
   {
     id: 1,
     title: "Aiir",
@@ -60,10 +68,9 @@ const products = [
     url: "https://www.kiplot.com/",
     width: "100%",
   },
-  // ... more products
 ];
 
-const ImageButton = styled(ButtonBase)(({ theme }) => ({
+const ImageButton = styled(ButtonBase)(({ theme }: { theme: Theme }) => ({
   position: "relative",
   height: 200,
   display: "block",
@@ -95,7 +102,7 @@ const ImageSrc = styled("span")({
   backgroundPosition: "center 40%",
 });
 
-const Image = styled("span")(({ theme }) => ({
+const Image = styled("span")(({ theme }: { theme: Theme }) => ({
   position: "absolute",
   left: 0,
   right: 0,
@@ -107,7 +114,7 @@ const Image = styled("span")(({ theme }) => ({
   color: theme.palette.common.white,
 }));
 
-const ImageBackdrop = styled("span")(({ theme }) => ({
+const ImageBackdrop = styled("span")(({ theme }: { theme: Theme }) => ({
   position: "absolute",
   left: 0,
   right: 0,
@@ -118,7 +125,7 @@ const ImageBackdrop = styled("span")(({ theme }) => ({
   transition: theme.transitions.create("opacity"),
 }));
 
-const ImageMarked = styled("span")(({ theme }) => ({
+const ImageMarked = styled("span")(({ theme }: { theme: Theme }) => ({
   height: 3,
   width: 18,
   backgroundColor: theme.palette.common.white,
@@ -128,14 +135,14 @@ const ImageMarked = styled("span")(({ theme }) => ({
   transition: theme.transitions.create("opacity"),
 }));
 
-function scrollToTop() {
+const scrollToTop = (): void => {
   window.scrollTo({
     top: 0,
     behavior: "smooth",
   });
-}
+};
 
-const ProductsPage = () => {
+const ProductsPage: React.FC = () => {
   return (
     <Container maxWidth="md">
       <Typography
@@ -145,8 +152,7 @@ const ProductsPage = () => {
         gutterBottom
         sx={{ mt: 24 }}
       >
-        Ed is a UK-based product builder, startup creator, AI enthusiast, and
-        hobby coder.
+        Ed is a UK-based product builder, AI enthusiast, and hobby coder.
       </Typography>
       <Typography
         color="primary"
@@ -204,32 +210,17 @@ const ProductsPage = () => {
           </Box>
         ))}
       </Box>
-      <Box mt={24}>
-        <Typography
+      <Box sx={{ display: "flex", justifyContent: "center", mt: 8 }}>
+        <Button
           color="primary"
-          variant="h4"
-          align="center"
-          sx={{ maxWidth: "600px", margin: "0 auto" }}
+          variant="outlined"
+          onClick={scrollToTop}
+          component={RouterLink}
+          to="/about"
         >
-          Find out more about Ed and his approach to building product businesses
-        </Typography>
+          Learn more about Ed
+        </Button>
       </Box>
-
-      <Grid container justifyContent="center">
-        <Grid item>
-          <Button
-            onClick={scrollToTop}
-            color="primary"
-            variant="outlined"
-            component={RouterLink}
-            to="/about"
-            align="center"
-            sx={{ mt: 8 }}
-          >
-            About Ed
-          </Button>
-        </Grid>
-      </Grid>
     </Container>
   );
 };
