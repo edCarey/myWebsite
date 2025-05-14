@@ -1,13 +1,13 @@
-import React from 'react';
-import { Container, Typography, Button, Box } from '@mui/material';
+import { Box, Button, Container, Typography } from "@mui/material";
+import React from "react";
 
-const BlogPage = () => {
+const BlogPage: React.FC = () => {
   return (
     <Container maxWidth="md">
       <Typography variant="h3" align="center" gutterBottom sx={{ mt: 24 }}>
         Blog
       </Typography>
-      <Box sx={{ display: 'flex', justifyContent: 'center', mt: 8 }}>
+      <Box sx={{ display: "flex", justifyContent: "center", mt: 8 }}>
         <Button
           color="primary"
           variant="outlined"

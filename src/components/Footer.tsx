@@ -1,7 +1,7 @@
-import React from 'react';
-import { Container, Typography } from '@mui/material';
+import { Container, Typography } from "@mui/material";
+import React from "react";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer>
       <Container maxWidth="lg" sx={{ paddingTop: 24, paddingBottom: 2 }}>
