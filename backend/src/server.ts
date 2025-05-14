@@ -17,7 +17,7 @@ const port = process.env.PORT || 3001;
 // Configure CORS to only allow requests from your frontend domain
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://zesty-kitsune-b2e440.netlify.app/",
+  "https://zesty-kitsune-b2e440.netlify.app",
   process.env.FRONTEND_URL, // Add this line to support environment-based frontend URL
 ];
 
