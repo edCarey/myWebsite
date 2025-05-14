@@ -17,7 +17,8 @@ const port = process.env.PORT || 3001;
 // Configure CORS to only allow requests from your frontend domain
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://your-netlify-app.netlify.app", // You'll update this with your actual Netlify domain
+  "https://edcarey.io", // Update this with your actual Netlify domain
+  process.env.FRONTEND_URL, // Add this line to support environment-based frontend URL
 ];
 
 app.use(
