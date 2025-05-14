@@ -34,9 +34,6 @@ const Header: React.FC = () => {
           </Typography>
         </RouterLink>
         <div style={{ flexGrow: 1 }}></div>
-        <Button color="primary" onClick={scrollToTop} component={Link} to="/">
-          Products
-        </Button>
         <Button
           color="primary"
           onClick={scrollToTop}
