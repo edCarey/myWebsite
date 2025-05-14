@@ -154,6 +154,16 @@ const ProductsPage: React.FC = () => {
       >
         Ed is a UK-based product builder, AI enthusiast, and hobby coder.
       </Typography>
+      <Box sx={{ display: "flex", justifyContent: "center", mt: 4, mb: 8 }}>
+        <Button
+          color="primary"
+          variant="outlined"
+          component={RouterLink}
+          to="/chat"
+        >
+          Chat with Ed
+        </Button>
+      </Box>
       <Typography
         color="primary"
         variant="h5"

@@ -1,3 +1,4 @@
+import ChatIcon from "@mui/icons-material/Chat";
 import { AppBar, Button, Toolbar, Typography } from "@mui/material";
 import React from "react";
 import { Link, Link as RouterLink } from "react-router-dom";
@@ -54,6 +55,15 @@ const Header: React.FC = () => {
         </Button>
         <Button color="primary" onClick={scrollToTop} component={Link} to="/cv">
           CV
+        </Button>
+        <Button
+          color="primary"
+          onClick={scrollToTop}
+          component={Link}
+          to="/chat"
+          startIcon={<ChatIcon />}
+        >
+          Chat
         </Button>
       </Toolbar>
     </AppBar>

@@ -4,6 +4,7 @@ import React from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import AboutPage from "./components/AboutPage";
 import BlogPage from "./components/BlogPage";
+import { ChatPage } from "./components/ChatPage";
 import CVPage from "./components/CVPage";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -26,6 +27,7 @@ const App: React.FC = () => {
             <Route path="/" element={<ProductsPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/chat" element={<ChatPage />} />
             <Route path="/cv" element={<CVPage />} />
           </Routes>
           <Footer />
