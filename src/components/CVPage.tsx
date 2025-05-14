@@ -17,7 +17,7 @@ const OverlayText = styled(Typography)({
   color: "#464545",
 });
 
-const CVPage = () => {
+const CVPage: React.FC = () => {
   return (
     <Container maxWidth="md">
       <Typography variant="h3" align="center" gutterBottom sx={{ mt: 24 }}>

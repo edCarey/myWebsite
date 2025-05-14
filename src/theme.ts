@@ -1,9 +1,27 @@
-import { createTheme } from "@mui/material/styles";
+import { createTheme, ThemeOptions } from "@mui/material/styles";
+
+declare module "@mui/material/styles" {
+  interface Theme {
+    globals: {
+      backgroundColor: string;
+    };
+  }
+  interface ThemeOptions {
+    globals?: {
+      backgroundColor: string;
+    };
+  }
+  interface Palette {
+    headline: Palette["primary"];
+  }
+  interface PaletteOptions {
+    headline?: PaletteOptions["primary"];
+  }
+}
 
 const theme = createTheme({
   typography: {
     fontFamily: ["Space Mono", "monospace"].join(","),
-    // Configure specific typography variants if needed
     h1: {
       fontFamily: "Space Mono, monospace",
     },
@@ -46,6 +64,6 @@ const theme = createTheme({
   globals: {
     backgroundColor: "#F6F5F4",
   },
-});
+} as ThemeOptions);
 
 export default theme;

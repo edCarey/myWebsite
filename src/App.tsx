@@ -1,18 +1,16 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { ThemeProvider } from '@mui/material/styles';
-import theme from './theme';
-import Header from './components/Header';
-import CVPage from './components/CVPage';
-import BlogPage from './components/BlogPage';
-import Footer from './components/Footer';
-import AboutPage from './components/AboutPage';
-import ProductsPage from './components/ProductsPage';
-import { Box } from '@mui/system';
+import { ThemeProvider } from "@mui/material/styles";
+import { Box } from "@mui/system";
+import React from "react";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import AboutPage from "./components/AboutPage";
+import BlogPage from "./components/BlogPage";
+import CVPage from "./components/CVPage";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import ProductsPage from "./components/ProductsPage";
+import theme from "./theme";
 
-
-
-function App() {
+const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <Router>
@@ -20,7 +18,7 @@ function App() {
         <Box
           sx={{
             backgroundColor: theme.globals.backgroundColor,
-            minHeight: '100vh',
+            minHeight: "100vh",
             paddingTop: theme.spacing(2),
           }}
         >
@@ -35,6 +33,6 @@ function App() {
       </Router>
     </ThemeProvider>
   );
-}
+};
 
 export default App;
