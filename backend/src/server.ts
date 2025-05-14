@@ -17,27 +17,40 @@ const port = process.env.PORT || 3001;
 // Configure CORS to only allow requests from your frontend domain
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://edcarey.io", // Update this with your actual Netlify domain
+  "https://zesty-kitsune-b2e440.netlify.app/",
   process.env.FRONTEND_URL, // Add this line to support environment-based frontend URL
 ];
 
-app.use(
-  cors({
-    origin: function (origin, callback) {
-      // Allow requests with no origin (like mobile apps or curl requests)
-      if (!origin) return callback(null, true);
-
-      if (allowedOrigins.indexOf(origin) === -1) {
-        const msg =
-          "The CORS policy for this site does not allow access from the specified Origin.";
-        return callback(new Error(msg), false);
-      }
+// CORS configuration
+const corsOptions = {
+  origin: function (
+    origin: string | undefined,
+    callback: (err: Error | null, allow?: boolean) => void
+  ) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) {
       return callback(null, true);
-    },
-  })
-);
+    }
 
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true,
+  optionsSuccessStatus: 204,
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
+
+// Add a test endpoint
+app.get("/api/health", (req, res) => {
+  res.json({ status: "ok" });
+});
 
 app.post("/api/chat", async (req, res) => {
   try {
@@ -57,5 +70,6 @@ app.listen(port, () => {
     OPENAI_API_KEY: process.env.OPENAI_API_KEY
       ? "****" + process.env.OPENAI_API_KEY.slice(-4)
       : "NOT SET",
+    ALLOWED_ORIGINS: allowedOrigins,
   });
 });
