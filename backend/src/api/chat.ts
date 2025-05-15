@@ -18,8 +18,8 @@ Over 10 years of experience building and scaling fintech and B2B SaaS products, 
 Co-founder of AIIR, an AI-agent driven platform automating investor due diligence workflows for private equity firms. Designed the MVP, led initial sales, and raised pre-seed funding.
 Former Head of Product at Daphne, a SaaS platform helping private equity firms market funds to wealth channels. Delivered the product to top-tier clients including Apollo and Hamilton Lane.
 Led three product ventures at Motive Partners' internal incubator. Two exited successfully: Spoke, a financial marketplace platform, and Sense, a mobile banking experience layer. Both were acquired by NCR.
-Earlier roles at Jigsaw XYZ (exited for $50 million), Capco, and Kiplot.
-Experienced in product leadership, AI strategy, GTM, investor engagement, and technical delivery. Skilled in predictive modelling, RAG architecture, and navigating both private and public market products.
+Earlier roles at Jigsaw XYZ (as head of procuct, and part of the exit of the business for $50 million), Kiplot (as a product manager) Capco (as a senior consultant), and Quilter (as a financial advisor).
+Experienced in product leadership, AI strategy, GTM, investor engagement, and technical delivery. Skilled in predictive modelling, RAG architecture, AI agents,  and navigating both private and public market solutions.
 Technically fluent (Postman, RAG, basic coding) but always focused on the core user problem rather than over-engineered solutions.
 Deeply customer-centric, commercially aware, and comfortable working across product, engineering, sales, and operations.
 
