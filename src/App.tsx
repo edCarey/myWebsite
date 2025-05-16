@@ -1,5 +1,4 @@
 import { ThemeProvider } from "@mui/material/styles";
-import { Box } from "@mui/system";
 import React from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import AboutPage from "./components/AboutPage";
@@ -9,6 +8,7 @@ import CVPage from "./components/CVPage";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import ProductsPage from "./components/ProductsPage";
+import PageLayout from "./layouts/PageLayout";
 import theme from "./theme";
 
 const App: React.FC = () => {
@@ -16,22 +16,30 @@ const App: React.FC = () => {
     <ThemeProvider theme={theme}>
       <Router>
         <Header />
-        <Box
-          sx={{
-            backgroundColor: theme.globals.backgroundColor,
-            minHeight: "100vh",
-            paddingTop: theme.spacing(2),
-          }}
-        >
-          <Routes>
-            <Route path="/" element={<ProductsPage />} />
-            <Route path="/blog" element={<BlogPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/chat" element={<ChatPage />} />
-            <Route path="/cv" element={<CVPage />} />
-          </Routes>
-          <Footer />
-        </Box>
+        <Routes>
+          <Route
+            path="/chat"
+            element={
+              <PageLayout isFixed={true}>
+                <ChatPage />
+              </PageLayout>
+            }
+          />
+          <Route
+            path="*"
+            element={
+              <PageLayout>
+                <Routes>
+                  <Route path="/" element={<ProductsPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  <Route path="/cv" element={<CVPage />} />
+                </Routes>
+                <Footer />
+              </PageLayout>
+            }
+          />
+        </Routes>
       </Router>
     </ThemeProvider>
   );
