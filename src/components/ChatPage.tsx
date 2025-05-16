@@ -91,7 +91,11 @@ export const ChatPage: React.FC = () => {
     <Container maxWidth="md" sx={{ mt: 4, mb: 4 }}>
       <Paper
         elevation={3}
-        sx={{ height: "80vh", display: "flex", flexDirection: "column" }}
+        sx={{
+          height: "70vh",
+          display: "flex",
+          flexDirection: "column",
+        }}
       >
         <Box sx={{ p: 2, backgroundColor: "primary.main", color: "white" }}>
           <Typography variant="h6">Chat with Ed</Typography>
